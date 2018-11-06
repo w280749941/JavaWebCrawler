@@ -166,7 +166,7 @@ public class ProfileParser implements Parser {
             profile.setDrinking(false);
         }
 
-        System.out.println(profile.toString());
+        System.out.println("Received profile: " + profile.toString());
         return new ParseResult(new ArrayList<>(), new ArrayList<>());
     }
 }

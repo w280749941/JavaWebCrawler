@@ -31,6 +31,7 @@ public class CityParser implements Parser {
         {
             urls.add(new Request(matcher.group(1), ProfileParser.getParser()));
             items.add(matcher.group(2));
+            System.out.println("Received user: " + matcher.group(2));
         }
         return new ParseResult(urls,items);
     }

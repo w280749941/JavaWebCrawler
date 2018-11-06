@@ -27,11 +27,12 @@ public class CityListParser implements Parser {
         Matcher matcher = pattern.matcher(data);
         List<Request> urls = new ArrayList<>();
         List<String> items = new ArrayList<>();
-        int limit = 1;
+        int limit = 20;
         while(matcher.find())
         {
             urls.add(new Request(matcher.group(1), CityParser.getParser()));
             items.add(matcher.group(2));
+            System.out.println("Received city: " + matcher.group(2));
             limit--;
             if(limit == 0)
                 break;

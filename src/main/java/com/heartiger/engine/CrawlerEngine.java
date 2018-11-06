@@ -31,8 +31,6 @@ public class CrawlerEngine {
                     ParseResult parseResult = parser.parse(fetchResult);
                     for(Request newRequest: parseResult.getRequests())
                         requestQueue.offer(newRequest);
-                    for(String item: parseResult.getItems())
-                        System.out.println("Received item: " + item);
                 }
             } catch (Exception e) {
                 System.out.println("Failed to run fetcher on: " + request.getUrl());
