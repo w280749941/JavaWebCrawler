@@ -27,7 +27,7 @@ public class CityListParser implements Parser {
         Matcher matcher = pattern.matcher(data);
         List<Request> urls = new ArrayList<>();
         List<String> items = new ArrayList<>();
-        int limit = 20;
+        int limit = 1050;
         while(matcher.find())
         {
             urls.add(new Request(matcher.group(1), CityParser.getParser()));

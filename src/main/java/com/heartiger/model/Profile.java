@@ -18,6 +18,8 @@ public class Profile {
     private Boolean smoking;
     private Boolean drinking;
     private Boolean children;
+    private String picture;
+    private String profileLink;
 
     public void setWorkPlace(String workPlace) {
         this.workPlace = workPlace;
@@ -113,6 +115,96 @@ public class Profile {
                 ", drinking=" + drinking +
                 ", children=" + children +
                 ", wantKids='" + wantKids + '\'' +
+                ", picture='" + picture + '\'' +
+                ", link='" + profileLink + '\'' +
                 '}';
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getProfileLink() {
+        return profileLink;
+    }
+
+    public void setProfileLink(String profileLink) {
+        this.profileLink = profileLink;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public String getIncome() {
+        return income;
+    }
+
+    public String getMarriage() {
+        return marriage;
+    }
+
+    public String getEducation() {
+        return education;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public String getResidence() {
+        return residence;
+    }
+
+    public String getConstellation() {
+        return constellation;
+    }
+
+    public String getWorkPlace() {
+        return workPlace;
+    }
+
+    public Boolean getHouse() {
+        return house;
+    }
+
+    public Boolean getCar() {
+        return car;
+    }
+
+    public Boolean getSmoking() {
+        return smoking;
+    }
+
+    public Boolean getDrinking() {
+        return drinking;
+    }
+
+    public Boolean getChildren() {
+        return children;
+    }
+
+    public String getWantKids() {
+        return wantKids;
     }
 }

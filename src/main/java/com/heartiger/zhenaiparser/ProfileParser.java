@@ -58,6 +58,11 @@ public class ProfileParser implements Parser {
     private final static Pattern childrenInfo = Pattern
             .compile("\"detailInfo\":\\[.*,\"([^\"]*有孩子[^\"]*)\",.*]");
 
+    private final static Pattern pictureInfo = Pattern
+            .compile("style=\"background-image:url\\(([^?]+)?");
+
+    private final static Pattern linkInfo = Pattern.compile("href=\"([^\"]+)\">");
+
     private final static Parser parser = new ProfileParser();
 
     private ProfileParser(){}
@@ -164,6 +169,16 @@ public class ProfileParser implements Parser {
             profile.setChildren(true);
         } else {
             profile.setDrinking(false);
+        }
+
+        matcher = pictureInfo.matcher(data);
+        if (matcher.find()) {
+            profile.setPicture(matcher.group(1));
+        }
+
+        matcher = linkInfo.matcher(data);
+        if (matcher.find()) {
+            profile.setProfileLink(matcher.group(1).replace("m.", ""));
         }
 
         System.out.println("Received profile: " + profile.toString());
